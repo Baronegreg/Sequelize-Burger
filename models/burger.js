@@ -19,32 +19,22 @@
 //Post.js
 //======================================================================================
 module.exports = function (sequelize, DataTypes) {
-  var Burgers = sequelize.define("Burgers",{
+  var Burger = sequelize.define("burgers",{
     burger_name: {
       type: DataTypes.STRING,
       validate: { 
-        len: [1,50] }
-    },
-    devoured: DataTypes.BOOLEAN
+        len: [1,50] 
+      },
+        allownull: false
   },
-
-    {
-    
-          // We're saying that we want our Customer to have Burgers
-        classMethods: {
-          associate: function(models) {
-                // A Customer (foreignKey) is required or a Burger can't be made
-                Burgers.belongsTo(models.Customer, {
-                  foreignKey: {
-                    allowNull: false
-                  }
-                })
-          }
-        }
-      }
-    );
-  return Burgers;
-};
+    devoured:{ 
+    type: DataTypes.BOOLEAN,
+    defaultvalue: false
+  }
+}
+);
+  return Burger;
+}
 //=========================================================================================
 // var connection = require("../config/connection");
 //     //Find all Burgers
