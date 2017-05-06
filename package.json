@@ -1,0 +1,26 @@
+{
+  "name": "sequelize-burger",
+  "version": "1.0.0",
+  "description": "burger app using sequelize",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Baronegreg/Sequelize-Burger.git"
+  },
+  "author": "Greg Barone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Baronegreg/Sequelize-Burger/issues"
+  },
+  "homepage": "https://github.com/Baronegreg/Sequelize-Burger#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mysql": "^2.12.0",
+    "sequelize": "^3.28.0"
+  }
+}
